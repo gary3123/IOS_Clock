@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="globe_insertVC" customModule="Clock" customModuleProvider="target">
+            <connections>
+                <outlet property="searchTF" destination="PXV-VK-eaZ" id="PsR-7B-4bG"/>
+                <outlet property="tableView" destination="CAT-fR-m39" id="Rp8-Vu-PDc"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="CAT-fR-m39">
+                    <rect key="frame" x="0.0" y="58" width="375" height="609"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="609" id="eSK-oq-e5g"/>
+                    </constraints>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ypx-xa-5w3">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="選擇城市....." textAlignment="natural" minimumFontSize="17" background="magnifyingglass" catalog="system" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="PXV-VK-eaZ">
+                            <rect key="frame" x="8" y="8" width="285.5" height="34"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <action selector="search:" destination="-1" eventType="editingChanged" id="jkd-hR-6Q0"/>
+                            </connections>
+                        </textField>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GMM-nc-wcn">
+                            <rect key="frame" x="301.5" y="9.5" width="68.5" height="31"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Cancel"/>
+                            <connections>
+                                <action selector="back:" destination="-1" eventType="touchUpInside" id="NN2-Uw-uY5"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemGray6Color"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="GMM-nc-wcn" secondAttribute="trailing" constant="5" id="IAC-ww-drR"/>
+                        <constraint firstItem="PXV-VK-eaZ" firstAttribute="centerY" secondItem="ypx-xa-5w3" secondAttribute="centerY" id="LCM-ji-7OH"/>
+                        <constraint firstItem="PXV-VK-eaZ" firstAttribute="leading" secondItem="ypx-xa-5w3" secondAttribute="leading" constant="8" id="VWH-su-cor"/>
+                        <constraint firstAttribute="height" constant="50" id="b7F-xY-oYm"/>
+                        <constraint firstItem="GMM-nc-wcn" firstAttribute="centerY" secondItem="ypx-xa-5w3" secondAttribute="centerY" id="jf2-zT-p7r"/>
+                        <constraint firstItem="GMM-nc-wcn" firstAttribute="leading" secondItem="PXV-VK-eaZ" secondAttribute="trailing" constant="8" symbolic="YES" id="wQ3-fq-VwY"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="CAT-fR-m39" firstAttribute="top" secondItem="ypx-xa-5w3" secondAttribute="bottom" constant="8" symbolic="YES" id="4ud-JE-8Ld"/>
+                <constraint firstItem="ypx-xa-5w3" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="5XM-PZ-cbt"/>
+                <constraint firstItem="ypx-xa-5w3" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="7ok-UD-U8G"/>
+                <constraint firstItem="ypx-xa-5w3" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="8B7-YY-gmn"/>
+                <constraint firstItem="CAT-fR-m39" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="WE0-ib-Zsu"/>
+                <constraint firstItem="CAT-fR-m39" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="bhg-Ge-wl9"/>
+                <constraint firstItem="CAT-fR-m39" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="eYC-cx-xU1"/>
+            </constraints>
+            <point key="canvasLocation" x="130.40000000000001" y="64.31784107946028"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

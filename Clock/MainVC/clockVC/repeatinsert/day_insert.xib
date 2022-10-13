@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="day_insert" customModule="Clock" customModuleProvider="target">
+            <connections>
+                <outlet property="tabelview" destination="pNi-To-bNp" id="4co-wZ-naq"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ppY-pe-uo0">
+                    <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <items>
+                        <navigationItem title="Repeat" id="otv-fk-adC">
+                            <barButtonItem key="leftBarButtonItem" title="Item" image="chevron.backward" catalog="system" id="fX1-gE-zTr">
+                                <connections>
+                                    <action selector="cancel:" destination="-1" id="p3v-aa-eG6"/>
+                                </connections>
+                            </barButtonItem>
+                        </navigationItem>
+                    </items>
+                </navigationBar>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" style="insetGrouped" separatorStyle="default" allowsMultipleSelection="YES" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="pNi-To-bNp">
+                    <rect key="frame" x="20" y="158" width="374" height="400"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="400" id="tpL-On-v7c"/>
+                    </constraints>
+                </tableView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="pNi-To-bNp" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="6DR-eF-KPz"/>
+                <constraint firstItem="ppY-pe-uo0" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Pxr-ke-HDJ"/>
+                <constraint firstItem="ppY-pe-uo0" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Tqj-Rs-9I7"/>
+                <constraint firstItem="ppY-pe-uo0" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Z9H-Cp-O8E"/>
+                <constraint firstItem="pNi-To-bNp" firstAttribute="top" secondItem="ppY-pe-uo0" secondAttribute="bottom" constant="70" id="t8H-PN-lDS"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="pNi-To-bNp" secondAttribute="trailing" constant="20" id="x26-dH-HOw"/>
+            </constraints>
+            <point key="canvasLocation" x="131.8840579710145" y="79.6875"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="chevron.backward" catalog="system" width="96" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

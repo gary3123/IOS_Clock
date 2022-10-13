@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="set_soundVC" customModule="Clock" customModuleProvider="target">
+            <connections>
+                <outlet property="tableview" destination="CCP-ns-U11" id="rVA-yH-NUi"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ECO-uL-UtN">
+                    <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <items>
+                        <navigationItem title="Sound" id="Obz-IC-MOJ">
+                            <barButtonItem key="leftBarButtonItem" title="Item" image="chevron.left" catalog="system" id="Lvb-6v-laB">
+                                <connections>
+                                    <action selector="back:" destination="-1" id="PjD-tY-l0x"/>
+                                </connections>
+                            </barButtonItem>
+                        </navigationItem>
+                    </items>
+                </navigationBar>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="CCP-ns-U11">
+                    <rect key="frame" x="20" y="158" width="374" height="215"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="215" id="0f0-pO-CAs"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </tableView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="ECO-uL-UtN" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="20j-cF-px1"/>
+                <constraint firstItem="ECO-uL-UtN" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="HJb-Gl-sIn"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="CCP-ns-U11" secondAttribute="trailing" constant="20" id="WDu-5d-bWg"/>
+                <constraint firstItem="CCP-ns-U11" firstAttribute="top" secondItem="ECO-uL-UtN" secondAttribute="bottom" constant="70" id="bj8-5v-5OT"/>
+                <constraint firstItem="ECO-uL-UtN" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="c2R-B9-YKK"/>
+                <constraint firstItem="CCP-ns-U11" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="hWj-P0-dfs"/>
+                <constraint firstItem="CCP-ns-U11" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="yqO-p6-AxR"/>
+            </constraints>
+            <point key="canvasLocation" x="131.8840579710145" y="79.6875"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="chevron.left" catalog="system" width="96" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
